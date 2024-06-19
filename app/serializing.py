@@ -1,4 +1,4 @@
-from book import Book
+from app.book import Book
 import json
 import xml.etree.ElementTree as ElementTree
 
