@@ -1,5 +1,5 @@
 from app.serializing import Serializer
-from book import Book
+from app.book import Book
 
 
 def main(book: Book, commands: list[tuple[str, str]]) -> None | str:
