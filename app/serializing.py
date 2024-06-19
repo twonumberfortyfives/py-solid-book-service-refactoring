@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ElementTree
 
 
 class Serializer:
-    def __init__(self, book: Book):
+    def __init__(self, book: Book) -> None:
         self.book = book
 
     def serialize(self, serialize_type: str) -> str:
@@ -16,7 +16,8 @@ class Serializer:
             raise ValueError(f"Unknown serialize type: {serialize_type}")
 
     def _serialize_json(self) -> str:
-        return json.dumps({"title": self.book.title, "content": self.book.content})
+        return json.dumps({"title": self.book.title,
+                           "content": self.book.content})
 
     def _serialize_xml(self) -> str:
         root = ElementTree.Element("book")
