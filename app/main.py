@@ -4,7 +4,11 @@ from app.book_display import BookDisplay
 from app.book_print import BookPrint
 
 
-def main(book: Book, commands: list[tuple[str, str]]):
+def main(
+        book: Book,
+        commands: list[tuple[str, str]]
+) -> type(BookSerializer) | None:
+
     for cmd, method_type in commands:
         if cmd == "display":
             BookDisplay.display_book(book, method_type)

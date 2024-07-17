@@ -1,6 +1,9 @@
+from app.book_model import Book
+
+
 class BookPrint:
     @staticmethod
-    def print_book(book, print_type):
+    def print_book(book: Book, print_type: str) -> None:
         if print_type == "console":
             print(f"Printing the book: {book.title}...")
             print(book.content)
