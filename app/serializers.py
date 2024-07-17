@@ -4,7 +4,7 @@ from xml.etree import ElementTree
 from app.book_model import Book
 
 
-class BookSerializer:
+class BookSerializerJson:
 
     @staticmethod
     def serialize_json(book: Book, serialize_type: str) -> str:
@@ -13,6 +13,8 @@ class BookSerializer:
         else:
             raise ValueError(f"Unknown serialize type: {serialize_type}")
 
+
+class BookSerializerXml:
     @staticmethod
     def serialize_xml(book: Book, serialize_type: str) -> str:
         if serialize_type == "xml":
